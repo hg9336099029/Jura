@@ -1,5 +1,5 @@
 import '../styles/Home.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 import LegalQuote from './Quotes'
 
@@ -16,9 +16,7 @@ function Home() {
                     aria-label="Explore Jura"
                     onClick={() => navigate('/features')}
                 >
-                <Link to="/features" style={{textDecoration:'none'}}>
                     Explore
-                </Link>
                 </button>
             </div>
             
