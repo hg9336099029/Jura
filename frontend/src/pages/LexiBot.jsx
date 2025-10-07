@@ -33,12 +33,13 @@ function LexiBot() {
         throw new Error(`Error: ${response.statusText}`);
       }
       
-      const data = await response.text();  
+      const data = await response.json();
+      const botMessage = data.response;
 
       setChatHistory((oldChatHistory) => [
         ...oldChatHistory,
         { role: "user", parts: val },
-        { role: "LexiBot", parts: data },
+        { role: "LexiBot", parts: botMessage },
       ]);
       setVal("");
     } catch (error) {
